@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="website_form_inherit" model="ir.ui.view">
+            <field name="name">website.form.inherit</field>
+            <field name="model">website</field>
+            <field name="inherit_id" ref="website.view_website_form"/>
+            <field name="arch" type="xml">
+                <field name="domain" position="after">
+                    <field name="enable_webp_compress"/>
+                    <field name="webp_image_quality" attrs="{'invisible': [('enable_webp_compress','=', False)]}"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>
